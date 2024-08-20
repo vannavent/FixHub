@@ -49,7 +49,7 @@ const barChartOptions = {
       show: false,
     },
     xaxis: {
-      categories: ['Laptop', 'Phone', 'Monitor', 'Headphones', 'Camera'],
+      categories: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'],
     },
     yaxis: {
       title: {
@@ -70,11 +70,11 @@ const barChartOptions = {
   const areaChartOptions = {
     series: [
       {
-        name: 'Purchase Orders',
+        name: '2023',
         data: [31, 40, 28, 51, 42, 109, 100],
       },
       {
-        name: 'Sales Orders',
+        name: '2024',
         data: [11, 32, 45, 32, 34, 52, 41],
       },
     ],
@@ -99,13 +99,13 @@ const barChartOptions = {
     yaxis: [
       {
         title: {
-          text: 'Purchase Orders',
+          text: '',
         },
       },
       {
         opposite: true,
         title: {
-          text: 'Sales Orders',
+          text: '',
         },
       },
     ],

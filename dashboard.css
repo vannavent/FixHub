@@ -202,6 +202,7 @@ body {
   .charts {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
     gap: 20px;
   }
   
@@ -257,6 +258,7 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
+      align-content: stretch;
     }
     .grid-container {
       grid-template-columns: 1fr;
@@ -281,10 +283,15 @@ body {
   
   /* Small <= 768px */
   @media screen and (max-width: 768px) {
+    
+    .charts-card{
+      min-width: 100px;
+    }
     .charts {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns:  1fr;
       gap: 20px;
+      align-content: stretch;
     }
 
     .main-cards {
@@ -301,17 +308,21 @@ body {
   
   /* Extra Small <= 576px */
   @media screen and (max-width: 576px) {
-
+    #bar-chart, #area-chart, #pie-chart, #line-chart{
+      width: 300px;
+    }
     .charts {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 20px;
+      align-content: stretch;
+      
     }
     .header-left {
       display: none;
     }
 
     .charts-card{
-        width: 460px;
+        width: 350px;
     }
   }

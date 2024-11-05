@@ -18,52 +18,63 @@ function closeSidebar() {
 }
 
 
-//BAR CHART
+//CIRCULAR GAUGE CHART
+var options = {
+  chart: {
+    height: 300,
+    type: "radialBar",
+  },
 
-const barChartOptions = {
-    series: [
-      {
-        data: [10, 8, 6, 4, 2],
+  series: [67],
+  colors: ["#20E647"],
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 0,
+        size: "70%",
+        background: "#293450"
       },
-    ],
-    chart: {
-      type: 'bar',
-      height: 350,
-      toolbar: {
-        show: false,
+      track: {
+        dropShadow: {
+          enabled: true,
+          top: 2,
+          left: 0,
+          blur: 4,
+          opacity: 0.15
+        }
       },
-    },
-    colors: ['#246dec', '#cc3c43', '#367952', '#f5b74f', '#4f35a1'],
-    plotOptions: {
-      bar: {
-        distributed: true,
-        borderRadius: 4,
-        horizontal: false,
-        columnWidth: '40%',
-      },
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    legend: {
-      show: false,
-    },
-    xaxis: {
-      categories: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'],
-    },
-    yaxis: {
-      title: {
-        text: 'Count',
-      },
-    },
-  };
-  
-  const barChart = new ApexCharts(
-    document.querySelector('#bar-chart'),
-    barChartOptions
-  );
-  barChart.render();
+      dataLabels: {
+        name: {
+          offsetY: -10,
+          color: "#fff",
+          fontSize: "13px"
+        },
+        value: {
+          color: "#fff",
+          fontSize: "30px",
+          show: true
+        }
+      }
+    }
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shade: "dark",
+      type: "vertical",
+      gradientToColors: ["#87D4F9"],
+      stops: [0, 100]
+    }
+  },
+  stroke: {
+    lineCap: "round"
+  },
+  labels: ["Progress"]
+};
 
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
 
   //AREA CHART
 
@@ -126,17 +137,16 @@ const barChartOptions = {
 //PIE CHART
 
   var pieChartOptions = {
-    series: [44, 55, 13, 43, 22],
+    series: [44, 30, 20],
     chart: {
-    width: 380,
     type: 'pie',
   },
-  labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4', 'Semana 5'],
+  labels: ['Preventiva', 'Preditiva', 'Corretiva'],
   responsive: [{
     breakpoint: 480,
     options: {
       chart: {
-        width: 200
+        width: 350,
       },
       legend: {
         position: 'bottom'

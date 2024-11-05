@@ -156,7 +156,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 25px;
+    padding: 5px;
     background-color: #ffffff;
     box-sizing: border-box;
     border: 1px solid #d2d2d3;
@@ -165,7 +165,7 @@ body {
   }
   
   .card:first-child {
-    border-left: 7px solid #246dec;
+    border-left: 7px solid #2be413;
   }
   
   .card:nth-child(2) {
@@ -173,15 +173,15 @@ body {
   }
   
   .card:nth-child(3) {
-    border-left: 7px solid #367952;
+    border-left: 7px solid #fc3e57;
   }
   
   .card:nth-child(4) {
-    border-left: 7px solid #cc3c43;
+    border-left: 7px solid #b12128;
   }
   
   .card > span {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
   }
   
@@ -209,7 +209,7 @@ body {
   .charts-card {
     background-color: #ffffff;
     margin-bottom: 20px;
-    padding: 25px;
+    padding: 15px;
     box-sizing: border-box;
     -webkit-column-break-inside: avoid;
     border: 1px solid #d2d2d3;
